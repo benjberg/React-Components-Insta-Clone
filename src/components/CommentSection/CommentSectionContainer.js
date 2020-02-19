@@ -4,19 +4,32 @@
  import Comment from "./Comment";
  import "./Comment.css";
 
+// const CommentSection = props => {
+//   // Add state for the comments
+//   console.log('console2',props.comments);
+// const [comments] = useState(props.comments);
+//   return (
+//     <div>
+//       {comments.map(p => { return(
+//         <Comment  props={p}/>)
+//       })}
+      
+//       {/* map through the comments data and return the Comment component */}
+      
+//       <CommentInput />
+//     </div>
+//   );
+// };
+
 const CommentSection = props => {
   // Add state for the comments
-  console.log('console2',props);
-const [comments] = useState(props);
+  const [comments] = useState(props.comments);
+  console.log(props.comments);
   return (
     <div>
-      {Object.keys(comments).map(p => { return(
-        <Comment key={props.postId} props={p}/>)
+      {comments.map((comment, index) => {
+        return <Comment key={index} comment={comment}/>
       })}
-      
-      {/* map through the comments data and return the Comment component */}
-      
-      <CommentInput />
     </div>
   );
 };

@@ -12,8 +12,8 @@ const PostsPage = (props) => {
   console.log('console3', posts)
   return (
     <div className="posts-container-wrapper">
-      {posts.map(post => {return (
-        <Post key={post.userame} users={post}/>
+      {posts.map(props => {return (
+        <Post key={props.userame} users={props}/>
       )})}
       {/* map through data here to return a Post and pass data as props to Post */}
     </div>
