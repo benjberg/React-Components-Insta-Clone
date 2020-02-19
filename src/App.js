@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar/>
-      <PostPage/>
+      <PostPage />
       
       {/* Add imported components here to render them */}
     </div>

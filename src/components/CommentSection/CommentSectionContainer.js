@@ -6,8 +6,8 @@
 
 const CommentSection = props => {
   // Add state for the comments
-  console.log('console2',props)
-const [comments] = useState(props);
+  console.log('console2',props.props.comment)
+const [comments] = useState(props.props.comment);
   return (
     <div>
       {comments.man(p =>{
