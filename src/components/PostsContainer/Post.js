@@ -14,22 +14,22 @@ console.log('console1',props)
   return (
     <div className="post-border">
       <PostHeader
-        username={props.username}
+        username={props.users.username}
         thumbnailUrl={
-          props.thumbnailUrl
+          props.users.thumbnailUrl
         }
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.imageUrl}
+          src={props.users.imageUrl}
         />
       </div>
       <LikeSection />
       <CommentSection
-        postId={props.imageUrl}
-        comments={props.comments}
+        postId={props.users.imageUrl}
+        comments={props.users.comments}
       />
     </div>
   );

@@ -11,7 +11,7 @@ const [comments] = useState(props);
   return (
     <div>
       {Object.keys(comments).map(p => { return(
-        <Comment key={props.postId} comments={props.comments}/>)
+        <Comment key={props.postId} props={p}/>)
       })}
       
       {/* map through the comments data and return the Comment component */}
