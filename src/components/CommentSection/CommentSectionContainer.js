@@ -6,13 +6,14 @@
 
 const CommentSection = props => {
   // Add state for the comments
-  console.log('console2',props.props.comment)
-const [comments] = useState(props.props.comment);
+  console.log('console2',props);
+const [comments] = useState(props);
   return (
     <div>
-      {comments.man(p =>{
-        <Comment props={p}/>
+      {Object.keys(comments).map(p => { return(
+        <Comment key={props.postId} comments={props.comments}/>)
       })}
+      
       {/* map through the comments data and return the Comment component */}
       
       <CommentInput />
